@@ -1,0 +1,8 @@
+-- 查询有多少人选了3-105这门课
+select count(*) from score where cno='3-105';
+
+--每门课选修的人数
+select cno,count(*) from score GROUP BY cno;
+
+--查询Score表中至少有5名学生选修的并以3开头的课程的平均分数
+select cno,count(*) from score GROUP BY cno having count(*)>=5;
