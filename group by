@@ -6,3 +6,18 @@ select cno,count(*) from score GROUP BY cno;
 
 --查询Score表中至少有5名学生选修的并以3开头的课程的平均分数
 select cno,count(*) from score GROUP BY cno having count(*)>=5;
+
+
+--编写一个 SQL 查询，查找 Person 表中所有重复的电子邮箱。
+
+示例：
+
++----+---------+
+| Id | Email   |
++----+---------+
+| 1  | a@b.com |
+| 2  | c@d.com |
+| 3  | a@b.com |
++----+---------+
+
+select email from person group by email having count(email)>1
