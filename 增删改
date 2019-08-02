@@ -7,6 +7,8 @@ alter table 表名 add constraint 约束名字 DEFAULT 默认值 for 字段名�
 二、修改字段名：
 
 alter table 表名 rename column A to B
+mysql：
+alter table 表名 CHANGE 列名 新列名 字段类型
 
 三、修改字段类型：
 
