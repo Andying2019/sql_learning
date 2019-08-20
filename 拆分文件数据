@@ -1,6 +1,6 @@
 #-*- coding:utf-8 -*-
-#author:chenpeng
-#date: 2017-11-07
+#author:Teiei
+#date: 2019-08-20
 #作用：天池3Gcsv文件包含1亿条数据，现拆分成若干个，每个文件数达到Excel极限行数1048576。
 #备注：可以拆分csv格式文件和txt格式文件，返回的数据均是没有表头
 import os
