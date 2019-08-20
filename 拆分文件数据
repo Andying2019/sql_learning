@@ -45,4 +45,4 @@ def file_split(filename, file_num, header=True):
     
 if __name__ == '__main__':
     filename = 'UserBehavior.csv'
-    file_split(filename, 50, header=False)
+    file_split(filename, 50, header=False)    #拆分为50个文件
