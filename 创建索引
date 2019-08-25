@@ -1,0 +1,12 @@
+需求背景：
+简单的两表join select（两表数据量分别大概10万）：
+select A.order_id, A.payment_value, B.order_purchase_timestamp from 
+order_payments as A left join orders as B on A.order_id = B.order_id
+而在mysql上运行花费1779s时间。
+
+优化方案：
+创建索引：CREATE INDEX indexName ON tablename(columnname(length)); 
+（如果是CHAR，VARCHAR类型，length可以小于字段实际长度；如果是BLOB和TEXT类型，必须指定 length。）
+参考：https://www.runoob.com/mysql/mysql-index.html?tdsourcetag=s_pcqq_aiomsg
+
+优化后再执行查询语句，耗时1.141s
