@@ -1,0 +1,2 @@
+对于mysql使用中经常碰到的报错：Error Code: 2003 Can't connect to MySQL server on 'localhost' (10061)
+处理方式：计算机管理（开始菜单栏）---服务---mysql启动
