@@ -1,0 +1,12 @@
+表sc有两列 id,score
+1.row_number（）   ##排名结果为1234
+  select row_number（）over(order by score desc),* from sc
+或使用变量：@
+  set @rownum=0;
+  select sid,score,@rownum:=@rownum +1 as sequence from sc order by score;
+
+2.rank()  ##排名结果为12234
+  select rank（）over(order by score desc),* from sc
+
+3.dense_rank()   ##排名结果为12245
+  select dense_rank（）over(order by score desc),* from sc
