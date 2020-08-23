@@ -17,7 +17,7 @@ df = pd.read_csv('UserBehavior_0.csv', header = 0)
 print(df)
 
 
-engine = create_engine('mysql://root:password@localhost/taobaodata') ##root：用户名，password：密码 
+engine = create_engine('mysql://root:password@localhost/taobaodata') ##用户名:root，密码:password
 '''
 with engine.connect() as conn, conn.begin():
     df.to_sql('tianchi1_train_item', conn, if_exists='append', index=False)
